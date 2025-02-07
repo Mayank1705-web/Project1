@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NVIDIA_Clone</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        p{
+            display: inline;
+            margin: 10px;
+            font-size: 20px;
+        }
+        .navbar{
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            background-color: aquamarine;
+            width: 100px;
+            height: 65px;
+            display: inline;
+            margin-left: 200px;
+
+        }
+        .log{
+            height: 65px;
+            background-size: cover;
+        } 
+        .support1{
+            display: inline;
+            color: rgb(114, 114, 114);
+            font-weight:lighter;
+            cursor: pointer;
+        } 
+        .support2{
+            display: inline;
+            color: rgb(114, 114, 114);
+            font-weight:lighter;
+            cursor: pointer;
+            margin-left: 400px;
+        } 
+        .search{
+            display: inline;
+            padding-right: 10px;
+        }  
+        .user{
+            display: inline;
+        }
+        .dropdown{
+            background-color: rgb(220, 220, 220);
+            padding-left: 14%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: start;
+            height: 30px;
+            font-size: 19px;
+        }
+        .dropdown:active .menu3{
+            display: flex;
+            flex-direction: row;
+        }
+        .features{
+            background-color: aquamarine;
+        }
+        .menu3{
+	        display: flex;
+            background-color: royalblue;
+	        /*display: none;*/
+            position: absolute;
+	        padding-left: 225px;
+	        left: -6px;
+	        width: 1525px;
+	        height: 240px;
+	        top: 32px;
+            margin: 0 auto;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-bottom: 10px;
+            padding-top: 30px;
+        }
+        .p3{
+            display: flex;
+            width: 210px;
+            height:fit-content;
+            border-bottom: 3px solid gray;
+            text-align: start;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: medium;
+            font-weight: 700;
+            margin-top: 1.25%;
+            margin-inline-end: 2%;
+            background-color: aquamarine;
+            cursor: pointer;
+            justify-content: space-evenly;
+            text-decoration: none;
+        }
+        .level-3{
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+        .dd{
+            color: white;
+            text-decoration: none;
+            list-style: none;
+            font-size: smaller;
+        }
+        .qwe{
+            list-style: none;
+        }
+        .ft{
+            margin-top: 20%;
+        }
+        .main-body{
+            background-color: rgb(173, 173, 173);
+        }
+        .shop{
+            display: flex;
+            color: rgb(146, 255, 44);
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            
+        }
+        .row1{
+            display: flex;
+            flex-direction: row;
+            margin-left: 200px;
+            margin-right: 200px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .img1{
+            width: 250px;
+            height: 300px;
+            background-color: white;
+            justify-content: justify;
+        }
+        .image{
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .para{
+            padding: 4%;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        .p1{
+            display: flex;
+            color: black;
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .gaming{
+            display: flex;
+            color: rgb(146, 255, 44);
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+        .footer{
+            display: flex;
+            color: rgb(221, 221, 221);
+            background-color: rgb(67, 67, 67);
+            border-top: 5px solid rgb(146, 255, 44);;
+            text-align: center;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+            font-weight: lighter;
+            font-size: 17px;
+        }
+        .accept{
+            display: flex ; 
+            height: 60px;
+            width: 100px;
+            background-color: rgb(146, 255, 44);
+            justify-content: center;  
+            align-items: center; 
+            color: white;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            border: none;
+            margin-left: 90px;  
+            cursor: pointer;    
+            justify-content: center;     
+        }
+        h3{
+            color: rgb(146, 255, 44);
+        }
+        h4{
+            color: rgb(146, 255, 44);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img class="log" src="NVLogo_2D_H_thmb.jpg" alt="NVIDIA Logo">
+        </div>  
+        <div class="support1">
+            <p>Solution</p>
+            <p>Industries</p>
+            <p>For You</p>
+            <p>Product</p>
+        </div>
+        <div class="support2">
+            <p>Shop</p>
+            <p>Drivers</p>
+            <p>Support</p>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass" style="color: rgb(114, 114, 114);"></i>
+            </div> 
+            <div class="user">
+                <i class="fa-sharp fa-solid fa-cart-shopping" style="padding-right: 10px;"></i>
+                <i class="fa-regular fa-circle-user" style="color: rgb(114, 114, 114);"></i>
+                <p>Sign In</p>
+          </div>  
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="ware">
+            <p>Hardware</p>
+            <p>Software</p>
+        </div>
+        <div class="menu3" >
+            <ul class="level-3">
+                <li>
+                    <div class="p3">Gaming and Creating</div>
+                    <ul class="qwe">
+                        <li>
+                            <a class="dd" href="#">GeForce Graphics Cards</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">Laptops</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">G-SYNC Monitors</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">Studio</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">SHELD TV</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">RTX AI PCs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="p3">Laptops and Desktops</div>
+                    <ul class="qwe">
+                        <li>
+                            <a class="dd" href="#">GeForce RTX in Laptop</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">NVIDIA RTX in Laptops</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">NVIDIA RTX in Desktop</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">NVIDIA Project DIGITS</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">NVIDIA RTX AI Workstation</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="p3">Cloud and Data Center</div>
+                    <ul class="qwe">
+                        <li>
+                            <a class="dd" href="#">Overview</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">Grace CPU</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">DGX Platform</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">EGX Platform</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">IGX Platform</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">HGX Platform</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">NVIDIA MGX</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">NVIDIA OVX</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="p3">Networking</div>  
+                    <ul class="qwe">
+                        <li>
+                            <a class="dd" href="#">Overview</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">DPUs and SuperNICs</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">Ethernet</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">InfiniBand</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="p3">GPUs</div>
+                    <ul class="qwe">
+                        <li>
+                            <a class="dd" href="#">GeForce</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">NVIDIA RTX/Quadro</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">Data Center</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="p3">Embedded System</div>
+                    <ul class="qwe">
+                        <li>
+                            <a class="dd" href="#">Jetson</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">DRIVE AGX</a>
+                        </li>
+                        <li>
+                            <a class="dd" href="#">Clara AGX</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+      </div>    
+    </div>
+    <div class="main-body">
+        <br><br>
+        <div class="shop">SHOP</div>
+        <br><br>
+        <div class="row1">
+            <div class="img1">
+                <div class="image">
+                    <img src="img1.jpeg" alt="RTX 300" width="247" height="152">
+                </div>
+                <div class="para">
+                    <h3>The Ultimate Play</h3>
+                    <br>
+                    <p class="p1">GeForce RTX 30 Series.</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div class="image">
+                    <img src="img2.jpeg" alt="RTX 300" width="247" height="151">
+                </div>
+                <div class="para">
+                    <h4>Back to School with GeForce</h4>
+                    <br>
+                    <p class="p1">NVIDIA'GeForce RTX' 30Series laptops are the ultimate tools for school and gaming.</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div class="image">
+                    <img src="img3.jpeg" alt="GFN Thursday" width="247" height="152">
+                </div>
+                <div class="para">
+                    <h3>GFN Thursday</h3>
+                    <br>
+                    <p class="p1">See what's streaming this week on GeForce Now.</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div class="image">
+                    <img src="img4.jpeg" alt="Bold" width="247" height="152">
+                </div>
+                <div class="para">
+                    <h3>Built for the Bold</h3>
+                    <br>
+                    <p class="p1">Accelerate your creativity with studio laptops.</p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="gaming">GAMING</div>
+        <br><br>
+        <div class="row1">
+            <div class="img1">
+                <div class="image">
+                    <img src="img5.jpeg" alt="RTX 300" width="247" height="152">
+                </div>
+                <div class="para">
+                    <h3>The Ultimate Play</h3>
+                    <br>
+                    <p class="p1">GeForce RTX 30 Series.</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div class="image">
+                    <img src="img6.jpeg" alt="RTX 300" width="247" height="151">
+                </div>
+                <div class="para">
+                    <h4>Back to School with GeForce</h4>
+                    <br>
+                    <p class="p1">NVIDIA'GeForce RTX' 30Series laptops are the ultimate tools for school and gaming.</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div class="image">
+                    <img src="img7.jpeg" alt="GFN Thursday" width="247" height="152">
+                </div>
+                <div class="para">
+                    <h3>GFN Thursday</h3>
+                    <br>
+                    <p class="p1">See what's streaming this week on GeForce Now.</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div class="image">
+                    <img src="img8.jpeg" alt="Bold" width="247" height="152">
+                </div>
+                <div class="para">
+                    <h3>Built for the Bold</h3>
+                    <br>
+                    <p class="p1">Accelerate your creativity with studio laptops.</p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    <div class="footer">
+        <div class="nom">
+            <p class="nom-class">NVIDIA website use cookies to deliver and improve the website experience. See our <span style="color: rgb(99, 142, 13); cursor: pointer;">cookies policy</span> for further details on how to change your cookie setting.</p>
+        </div>
+        <div class="accept">ACCEPT</div>
+    </div>
+</body>
+</html>
